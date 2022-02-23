@@ -1,7 +1,8 @@
 #ifndef TRANSPOSE_H
 #define TRANSPOSE_H
 
-void trivial_transpose(double **A, double **B, int N)
+template<typename T>
+void trivial_transpose(T **A, T **B, int N)
 {
     for(int i = 0; i < N; i++)
     {
@@ -12,8 +13,8 @@ void trivial_transpose(double **A, double **B, int N)
     }
 }
 
-
-void cached_transpose(double **A, double **B, int block_size, int N)
+template<typename T>
+void cached_transpose(T **A, T **B, int block_size, int N)
 {
     int nBlocks = N/block_size + 1;
     for(int blk_i = 0; blk_i < nBlocks; blk_i++)
