@@ -1,8 +1,6 @@
 #ifndef TRANSPOSE_H
 #define TRANSPOSE_H
 
-#include <memory>
-
 template<typename T>
 void rowMajor_by_rowMajor(T &A, T &B, T &C, int N)
 {
