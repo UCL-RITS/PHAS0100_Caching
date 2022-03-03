@@ -4,7 +4,7 @@
 #include <memory>
 
 template<typename T>
-void rowMajor_by_rowMajor(T **A, T **B, T **C, int N)
+void rowMajor_by_rowMajor(T &A, T &B, T &C, int N)
 {
     for(int i = 0; i < N; i++)
     {
@@ -19,7 +19,7 @@ void rowMajor_by_rowMajor(T **A, T **B, T **C, int N)
 }
 
 template<typename T>
-void rowMajor_by_colMajor(T **A, T **B, T **C, int N)
+void rowMajor_by_colMajor(T &A, T &B, T &C, int N)
 {
     for(int i = 0; i < N; i++)
     {
@@ -34,7 +34,7 @@ void rowMajor_by_colMajor(T **A, T **B, T **C, int N)
 }
 
 template<typename T>
-void trivial_transpose(T **A, T **B, int N)
+void trivial_transpose(T &A, T &B, int N)
 {
     for(int i = 0; i < N; i++)
     {
